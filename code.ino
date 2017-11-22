@@ -17,7 +17,6 @@ void setup() {
 
   pinMode(trig_pin, OUTPUT);
   pinMode(echo_pin, INPUT);
-  Serial.begin(9600); // Starts the serial communication
 }
 void loop() {
   // Clears the trigPin
@@ -31,9 +30,7 @@ void loop() {
   duration = pulseIn(echo_pin, HIGH);
   // Calculating the distance
   distance= duration*0.034/2;
-  // Prints the distance on the Serial Monitor
-  Serial.print("Distance: ");
-  Serial.println(distance);
+
   if (distance >= 20){
     digitalWrite(motor_RB, LOW);
     digitalWrite(motor_LF, HIGH);
