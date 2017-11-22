@@ -18,6 +18,7 @@ void setup() {
   pinMode(trig_pin, OUTPUT);
   pinMode(echo_pin, INPUT);
 }
+
 void loop() {
   // Clears the trigPin
   digitalWrite(trig_pin, LOW);
@@ -30,11 +31,12 @@ void loop() {
   duration = pulseIn(echo_pin, HIGH);
   // Calculating the distance
   distance= duration*0.034/2;
-
+  
   if (distance >= 20){
-    digitalWrite(motor_RB, LOW);
     digitalWrite(motor_LF, HIGH);
     digitalWrite(motor_RF, HIGH);
+    digitalWrite(motor_RB, LOW);
+
   } else {
     digitalWrite(motor_LF, HIGH);
     digitalWrite(motor_RB, HIGH);
