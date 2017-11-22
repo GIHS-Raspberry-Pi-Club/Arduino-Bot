@@ -34,22 +34,22 @@ void loop() {
   
   if (distance <= 20) {
     if (distance <= 10) {
-      low()
+      reset_motors()
       digitalWrite(motor_LB, HIGH);
       digitalWrite(motor_RB, HIGH);
     } else {
-      low()
+      reset_motors()
       digitalWrite(motor_LF, HIGH);
       digitalWrite(motor_RF, HIGH);
     }
   } else {
-    low()
+    reset_motors()
     digitalWrite(motor_LF, HIGH);
     digitalWrite(motor_RB, HIGH);
   }
 }
 
-void low() {
+void reset_motors() {
   digitalWrite(motor_LF, LOW);
   digitalWrite(motor_LB, LOW);
   digitalWrite(motor_RF, LOW);
