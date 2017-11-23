@@ -35,7 +35,7 @@ void loop() {
   if (distance <= 10) {
       digitalWrite(motor_LF, HIGH);
       digitalWrite(motor_RB, HIGH);
-      delay(3000);
+      delay(3500);
       reset_motors();
   } else {
     reset_motors();
