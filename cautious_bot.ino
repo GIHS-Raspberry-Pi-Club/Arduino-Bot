@@ -34,18 +34,16 @@ void loop() {
   
   if (distance <= 20) {
     if (distance <= 10) {
-      reset_motors()
+      reset_motors();
       digitalWrite(motor_LB, HIGH);
       digitalWrite(motor_RB, HIGH);
     } else {
-      reset_motors()
+      reset_motors();
       digitalWrite(motor_LF, HIGH);
       digitalWrite(motor_RF, HIGH);
     }
   } else {
-    reset_motors()
-    digitalWrite(motor_LF, HIGH);
-    digitalWrite(motor_RB, HIGH);
+    reset_motors();
   }
 }
 
